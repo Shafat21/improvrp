@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 66% 26.7%; /* #163172 - Dark Blue (Primary Background) */
+    --foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Text Color) */
+
+    --primary: 220 66% 26.7%; /* #163172 - Dark Blue (Primary Button Color) */
+    --primary-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Primary, also for hover text if needed) */
+
+    --secondary: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Secondary Button Color, also for button hover) */
+    --secondary-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Secondary) */
+
+    --muted: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Muted Background) */
+    --muted-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Muted Text) */
+
+    --accent: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Accent Color) */
+    --accent-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Accent) */
+
+    --destructive: 0 62.8% 30.6%; /* Keep default red for destructive */
+    --destructive-foreground: 0 0% 96.5%; /* #F6F6F6 */
+
+    --border: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Border Color) */
+    --input: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Input Background) */
+    --ring: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Ring Color) */
+
+    --card: 220 66% 26.7%; /* #163172 - Dark Blue (Card Background) */
+    --card-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Card Text) */
+    --popover: 220 66% 26.7%; /* #163172 - Dark Blue (Popover Background) */
+    --popover-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Popover Text) */
+  }
+
+  .dark {
+    --background: 220 66% 26.7%; /* #163172 - Dark Blue (Primary Background) */
+    --foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Text Color) */
+
+    --primary: 220 66% 26.7%; /* #163172 - Dark Blue (Primary Button Color) */
+    --primary-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Primary, also for hover text if needed) */
+
+    --secondary: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Secondary Button Color, also for button hover) */
+    --secondary-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Secondary) */
+
+    --muted: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Muted Background) */
+    --muted-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Muted Text) */
+
+    --accent: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Accent Color) */
+    --accent-foreground: 0 0% 96.5%; /* #F6F6F6 - Light Grey (Text on Accent) */
+
+    --destructive: 0 62.8% 30.6%; /* Keep default red for destructive */
+    --destructive-foreground: 0 0% 96.5%; /* #F6F6F6 */
+
+    --border: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Border Color) */
+    --input: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Input Background) */
+    --ring: 212 70% 37.3%; /* #1E56A0 - Mid Blue (Ring Color) */
+
+    --card: 220 66% 26.7%; /* #163172 - Dark Blue (Card Background) */
+    --card-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Card Text) */
+    --popover: 220 66% 26.7%; /* #163172 - Dark Blue (Popover Background) */
+    --popover-foreground: 210 38% 89%; /* #D6E4F0 - Light Blue/Grey (Popover Text) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Font */
+.font-pacifico {
+  font-family: var(--font-pacifico);
+}
+
+/* Glass Effect Components */
+.glass-card {
+  /* 30 % opacity background & 20 % opacity border based on the configured palette  */
+  @apply backdrop-blur-md bg-background/30 border border-primary/20 shadow-xl;
+}
+
+.glass-card-light {
+  /* 10 % opacity background & 10 % opacity border */
+  @apply backdrop-blur-sm bg-background/10 border border-primary/10 shadow-lg;
+}
+
+.glass-navbar {
+  /* 50 % opacity background & 20 % opacity border */
+  @apply backdrop-blur-lg bg-background/50 border-b border-primary/20 shadow-md;
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply text-foreground hover:text-primary transition-colors;
+}
+
+.footer-link {
+  @apply text-foreground hover:text-primary transition-colors;
+}
+
+/* Store Button */
+.store-button {
+  @apply text-primary-foreground shadow-lg transition-all duration-200 hover:shadow-xl;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation Delays */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/40 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Sidebar scrollbar */
+#rules-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+#rules-sidebar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+#rules-sidebar::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+#rules-sidebar::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/40;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
