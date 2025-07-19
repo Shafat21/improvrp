@@ -18,13 +18,10 @@ A Next.js application that lets users sign in with Discord, checks guild members
 
 ## Getting Started
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/your-org/your-repo.git
-   cd your-repo
+
 ````
 
-2. **Install dependencies**
+**Install dependencies**
 
    ```bash
    npm install
@@ -32,7 +29,7 @@ A Next.js application that lets users sign in with Discord, checks guild members
    yarn install
    ```
 
-3. **Create your `.env` file**
+**Create your `.env` file**
    Copy `.env.example` to `.env` and fill in the values:
 
    ```ini
