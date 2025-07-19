@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 66% 26.7%; /* #163172 */
+    --foreground: 210 38% 89%;   /* #D6E4F0 */
+
+    --primary: 220 66% 26.7%; /* #163172 */
+    --primary-foreground: 0 0% 96%; /* #F6F6F6 */
+
+    --secondary: 212 66% 38%;  /* #1E56A0 */
+    --secondary-foreground: 0 0% 96%; /* #F6F6F6 */
+
+    --muted: 210 40% 94%; /* #EAF0F6 */
+    --muted-foreground: 220 20% 50%; /* Slightly darker text for contrast */
+
+    --accent: 212 66% 38%; /* #1E56A0 */
+    --accent-foreground: 0 0% 96%; /* #F6F6F6 */
+
+    --destructive: 0 65% 40%; /* red */
+    --destructive-foreground: 0 0% 100%; /* white */
+
+    --border: 212 66% 38%; /* #1E56A0 */
+    --input: 210 38% 89%; /* #D6E4F0 */
+    --ring: 212 66% 38%; /* #1E56A0 */
+
+    --card: 220 66% 26.7%; /* #163172 */
+    --card-foreground: 210 38% 89%;
+    --popover: 220 66% 26.7%;
+    --popover-foreground: 210 38% 89%;
+  }
+
+  .dark {
+    --background: 220 66% 20%;   /* Darker for dark mode */
+    --foreground: 210 38% 89%;   /* #D6E4F0 */
+
+    --primary: 220 66% 26.7%;
+    --primary-foreground: 0 0% 96%;
+
+    --secondary: 212 66% 38%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 210 40% 94%;
+    --muted-foreground: 220 20% 50%;
+
+    --accent: 212 66% 38%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 65% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 66% 38%;
+    --input: 210 38% 89%;
+    --ring: 212 66% 38%;
+
+    --card: 220 66% 20%;
+    --card-foreground: 210 38% 89%;
+    --popover: 220 66% 20%;
+    --popover-foreground: 210 38% 89%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Font */
+.font-pacifico {
+  font-family: var(--font-pacifico);
+}
+
+/* Glass Effect Components */
+.glass-card {
+  /* 30 % opacity background & 20 % opacity border based on the configured palette  */
+  @apply backdrop-blur-md bg-background/30 border border-primary/20 shadow-xl;
+}
+
+.glass-card-light {
+  /* 10 % opacity background & 10 % opacity border */
+  @apply backdrop-blur-sm bg-background/10 border border-primary/10 shadow-lg;
+}
+
+.glass-navbar {
+  /* 50 % opacity background & 20 % opacity border */
+  @apply backdrop-blur-lg bg-background/50 border-b border-primary/20 shadow-md;
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply text-foreground hover:text-primary transition-colors;
+}
+
+.footer-link {
+  @apply text-foreground hover:text-primary transition-colors;
+}
+
+/* Store Button */
+.store-button {
+  @apply text-primary-foreground shadow-lg transition-all duration-200 hover:shadow-xl;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation Delays */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/40 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Sidebar scrollbar */
+#rules-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+#rules-sidebar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+#rules-sidebar::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+#rules-sidebar::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/40;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}

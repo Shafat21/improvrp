@@ -1,0 +1,117 @@
+export const rules = [
+  {
+    id: "improv-culture",
+    title: "The Improv Culture",
+    description: "Core values and philosophy behind Improv RP's approach to roleplay.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Improv prioritizes story-driven roleplay over strict rule enforcement during scenarios.",
+      "All scenarios should be approached with creativity and an open mind.",
+      "Realistic mechanics are encouraged but not at the cost of creative freedom.",
+      "Expect the unexpected—every scene is unique.",
+    ],
+  },
+  {
+    id: "improv-lore",
+    title: "The Improv Lore",
+    description: "Background setting and lore for roleplaying in Improv RP.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "San Andreas is recovering from economic collapse and a failed coup.",
+      "Businesses are slowly reopening; many civilians are jobless or homeless.",
+      "Crime is rising due to understaffed emergency services.",
+      "Players may reuse old characters, but history from the past 5 years must be adapted.",
+    ],
+  },
+  {
+    id: "zero-tolerance",
+    title: "Zero Tolerance Policy",
+    description: "Behaviors that will not be tolerated under any circumstances.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "No toxicity, abuse, or harassment towards anyone.",
+      "No drama-baiting, manipulation, or undermining other players.",
+      "Racism, sexism, and all forms of discrimination are strictly prohibited.",
+      "IC or OOC harassment to make others uncomfortable is forbidden.",
+    ],
+  },
+  {
+    id: "community-rules",
+    title: "Community Rules",
+    description: "Basic requirements and expectations for all community members.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Community is 18+ only.",
+      "You must have a working, clear microphone.",
+      "Basic understanding of roleplay is required—no excuses for rule breaks.",
+      "Do not DM or VC staff about issues—use the ticket system only.",
+    ],
+  },
+  {
+    id: "streaming-rules",
+    title: "Streaming Rules",
+    description: "Rules for maintaining a streamer-friendly environment.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Always follow Twitch and Discord Terms of Service.",
+      "No stream sniping—watching streams to gain in-game advantage is forbidden.",
+    ],
+  },
+  {
+    id: "roleplay-rules",
+    title: "Roleplay Rules",
+    description: "General rules to maintain immersive and quality RP.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "No metagaming—using OOC info IC is not allowed.",
+      "No powergaming—do not force actions or outcomes on others.",
+      "Low-effort RP (e.g., RDM/NVL) will not be tolerated.",
+      "Character names must be original and appropriate.",
+      "Voice changers must be realistic and contextually appropriate.",
+    ],
+  },
+  {
+    id: "prohibited-scenarios",
+    title: "Prohibited Scenarios",
+    description: "Scenarios that are banned regardless of context.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Suicide or self-harm RP.",
+      "Pregnancy or child characters.",
+      "Rape, sexual assault, or sexist/racist characters.",
+    ],
+  },
+  {
+    id: "ooc-and-terminology",
+    title: "OOC and Terminology",
+    description: "Guidelines for staying in-character and avoiding immersion breaks.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Stay IC at all times; laugh off small breaks and move on.",
+      "Avoid using terms like 'head pop', 'headache', 'discord', or 'wizards'.",
+    ],
+  },
+  {
+    id: "bugs-and-exploits",
+    title: "Exploits and Bugs",
+    description: "Rules for reporting and handling bugs or exploits.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "Report bugs immediately to staff.",
+      "Abuse of bugs will result in bans depending on severity.",
+    ],
+  },
+  {
+    id: "crime-and-conflict",
+    title: "Crime and Conflict Rules",
+    description: "Limits and expectations around criminal activity and gang conflict.",
+    lastUpdated: "2025-07-18",
+    items: [
+      "No crime 30 minutes before server restart.",
+      "Max 5 criminals vs 8 PD unless scene escalates.",
+      "Standard gang conflict limit is 5v5 unless mutually agreed otherwise.",
+      "Consent is required for torture or any forced RP.",
+      "Permadeath must be declared clearly and not reversed post-deletion.",
+    ],
+  },
+];
